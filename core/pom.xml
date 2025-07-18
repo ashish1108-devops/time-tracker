@@ -59,17 +59,8 @@
                     <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
-                 
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <version>3.0.0-M5</version> <!-- or your current version -->
-            <configuration>
-                <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
-            </configuration>
-        </plugin>
 
-            <!-- Surefire Plugin -->
+            <!-- Surefire Plugin (Only one, with all argLine fixes) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -82,7 +73,6 @@
                         --add-opens java.base/java.io=ALL-UNNAMED
                         --add-opens java.base/java.util=ALL-UNNAMED
                     </argLine>
-                    <useSystemClassLoader>true</useSystemClassLoader>
                 </configuration>
             </plugin>
         </plugins>
