@@ -1,4 +1,4 @@
-package training.taylor.timetracker.core;
+package training.taylor.timetracker.core.TrackerCoreConfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Jason on 6/19/2015.
  */
 @Configuration
-@ComponentScan("training.taylor.timetracker.core")
+@ComponentScan(basePackages ="training.taylor.timetracker.core")
 public class TrackerCoreConfig {
 
     @Bean(name = "timesheet")
